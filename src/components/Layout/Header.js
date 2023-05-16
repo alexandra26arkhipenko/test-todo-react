@@ -1,5 +1,5 @@
 import classes from "./Header.module.css";
-import todoImage from "../../../assets/todo.jpg";
+import todoImage from "../../assets/todo.jpg";
 
 const Header = () => {
   return (
