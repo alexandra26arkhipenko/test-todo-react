@@ -3,9 +3,9 @@ import todoImage from "../../assets/todo.jpg";
 
 const Header = () => {
   return (
-    <div className={classes['todo-image']}>
-      <img src={todoImage} />
-    </div>
+    <header className={classes["todo-image"]}>
+      <img src={todoImage} alt="plants"/>
+    </header>
   );
 };
 
