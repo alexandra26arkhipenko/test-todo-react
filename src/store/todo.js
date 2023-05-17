@@ -30,7 +30,14 @@ const todoSlice = createSlice({
 
       if (index !== -1) {
         state.todos[index].isComplited = !state.todos[index].isComplited;
-      }      
+      }
+    },
+    deleteTodo(state, action) {
+      const index = state.todos.findIndex((x) => x.id === action.payload);
+
+      if (index !== -1) {
+        state.todos.splice(index, 1);
+      }
     },
   },
 });

@@ -10,7 +10,9 @@ import classes from "./Todo.module.css";
 const Todo = (props) => {
   const dispatch = useDispatch();
 
-  const deleteHandler = () => {};
+  const deleteHandler = () => {
+    dispatch(todoActions.deleteTodo(props.id));
+  };
 
   const checkboxHandler = () => {
     dispatch(todoActions.compliteTodo(props.id));
@@ -19,7 +21,11 @@ const Todo = (props) => {
   return (
     <li>
       <Checkbox checked={props.isComplited} onChange={checkboxHandler} />
-      <div className={`${classes.text} ${props.isComplited && classes.crossed}`}>{props.text}</div>
+      <div
+        className={`${classes.text} ${props.isComplited && classes.crossed}`}
+      >
+        {props.text}
+      </div>
       <Button type="button" className={classes.delete} onClick={deleteHandler}>
         {TODO_DELETE_BTN_TEXT}
       </Button>
