@@ -1,16 +1,11 @@
-.round {
-    width: 1.3em;
-    height: 1.3em;
-    background-color: white;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
+.checkbox{
+    display:inline-block;
 }
 
-.round:checked {
-    background-color: #a25e5e;
+.text{
+    display:inline-block;
+}
+
+.delete{
+    display:inline-block;
 }

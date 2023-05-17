@@ -1,13 +1,14 @@
+import Checkbox from "../../UI/Checkbox/Checkbox";
 import classes from "./Todo.module.css";
 
 const Todo = (props) => {
   return (
     <li>
-      <div >
-        <input type="checkbox" className={classes.round} />
+      <div className={classes.checkbox}>
+        <Checkbox />
       </div>
-      <div>{props.text}</div>
-      <div>
+      <div className={classes.text}>{props.text}</div>
+      <div className={classes.delete}> 
         <button>X</button>
       </div>
     </li>

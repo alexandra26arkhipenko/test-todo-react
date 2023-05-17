@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-import Card from "../../UI/Card";
+import Card from "../../UI/Card/Card";
 
 import classes from "./TodoList.module.css";
 import Todo from "../Todo/Todo";
