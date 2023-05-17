@@ -12,7 +12,12 @@ const TodoList = () => {
     <Card className={classes.todos}>
       <ul>
         {todos.map((todo) => (
-          <Todo key={todo.id} text={todo.text} />
+          <Todo
+            key={todo.id}
+            id={todo.id}
+            text={todo.text}
+            isComplited={todo.isComplited}
+          />
         ))}
       </ul>
     </Card>

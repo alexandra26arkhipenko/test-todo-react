@@ -1,19 +1,26 @@
+import { useDispatch } from "react-redux";
+
 import Button from "../../UI/Button/Button";
 import Checkbox from "../../UI/Checkbox/Checkbox";
+import { TODO_DELETE_BTN_TEXT } from "../../../constants/constants";
+import { todoActions } from "../../../store/todo";
 
 import classes from "./Todo.module.css";
 
 const Todo = (props) => {
+  const dispatch = useDispatch();
   const deleteHandler = () => {};
+
+  const checkboxHandler = () => {
+    dispatch(todoActions.compliteTodo(props.id));
+  };
 
   return (
     <li>
-      <div className={classes.checkbox}>
-        <Checkbox />
-      </div>
+      <Checkbox checked={props.isComplited} onChange={checkboxHandler} />
       <div className={classes.text}>{props.text}</div>
       <Button type="button" className={classes.delete} onClick={deleteHandler}>
-        X
+        {TODO_DELETE_BTN_TEXT}
       </Button>
     </li>
   );
