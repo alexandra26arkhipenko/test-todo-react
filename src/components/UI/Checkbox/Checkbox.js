@@ -7,6 +7,7 @@ const Checkbox = (props) => {
       checked={props.checked}
       onChange={props.onChange}
       className={classes.round}
+      disabled={props.isDisabled}
     />
   );
 };
