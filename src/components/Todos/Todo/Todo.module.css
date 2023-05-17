@@ -4,8 +4,20 @@
 
 .text{
     display:inline-block;
+    margin-left: 15px;
 }
 
-.delete{
-    display:inline-block;
+.delete {
+    margin-left: auto;
+    outline: none;
+    color: #e8e8e8;
+    display: none;
+}
+
+.delete:hover {
+    color: rgb(114, 12, 12);
+}
+
+li:hover .delete {
+    display: block;
 }

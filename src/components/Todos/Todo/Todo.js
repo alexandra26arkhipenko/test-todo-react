@@ -1,16 +1,20 @@
+import Button from "../../UI/Button/Button";
 import Checkbox from "../../UI/Checkbox/Checkbox";
+
 import classes from "./Todo.module.css";
 
 const Todo = (props) => {
+  const deleteHandler = () => {};
+
   return (
     <li>
       <div className={classes.checkbox}>
         <Checkbox />
       </div>
       <div className={classes.text}>{props.text}</div>
-      <div className={classes.delete}> 
-        <button>X</button>
-      </div>
+      <Button type="button" className={classes.delete} onClick={deleteHandler}>
+        X
+      </Button>
     </li>
   );
 };
