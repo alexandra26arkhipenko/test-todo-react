@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import Card from "../../UI/Card";
 
 import classes from "./TodoList.module.css";
+import Todo from "../Todo/Todo";
 
 const TodoList = () => {
   const todos = useSelector((state) => state.todos);
@@ -11,7 +12,7 @@ const TodoList = () => {
     <Card className={classes.todos}>
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>{todo.text}</li>
+          <Todo key={todo.id} text={todo.text} />
         ))}
       </ul>
     </Card>
