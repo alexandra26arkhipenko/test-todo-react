@@ -3,6 +3,10 @@
     margin-left: 15px;
 }
 
+.crossed{
+    text-decoration: line-through;
+}
+
 .delete {
     margin-left: auto;
     outline: none;
