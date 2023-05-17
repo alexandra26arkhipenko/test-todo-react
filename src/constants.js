@@ -1,1 +1,0 @@
-export const FOOTER_TEXT = 'Drag and drop to reorder list ';

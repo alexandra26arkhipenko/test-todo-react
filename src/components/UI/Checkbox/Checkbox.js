@@ -1,6 +1,6 @@
 import classes from "./Checkbox.module.css";
 
-const Checkbox = (props) => {
+const Checkbox = () => {
     return <input type="checkbox" className={classes.round} />
 }
 
