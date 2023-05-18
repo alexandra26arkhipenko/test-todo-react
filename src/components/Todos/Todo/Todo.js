@@ -20,9 +20,9 @@ const Todo = (props) => {
 
   return (
     <li>
-      <Checkbox checked={props.isComplited} onChange={checkboxHandler} />
+      <Checkbox checked={props.isCompleted} onChange={checkboxHandler} />
       <div
-        className={`${classes.text} ${props.isComplited && classes.crossed}`}
+        className={`${classes.text} ${props.isCompleted && classes.crossed}`}
       >
         {props.text}
       </div>

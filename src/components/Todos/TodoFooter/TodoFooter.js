@@ -1,13 +1,12 @@
-import { Fragment } from "react";
 import { useSelector } from "react-redux";
 
-import Button from "../../UI/Button/Button";
+import {
+    TODO_FOOTER_ITEMS_LEFT,
+    TODO_FOOTER_WELL_DONE,
+  } from "../../../constants/constants";
 
 import classes from "./TodoFooter.module.css";
-import {
-  TODO_FOOTER_ITEMS_LEFT,
-  TODO_FOOTER_WELL_DONE,
-} from "../../../constants/constants";
+import TodoFilter from "./TodoFilter/TodoFilter";
 
 const TodoFooter = () => {
   const todos = useSelector((state) => state.todos);
@@ -22,6 +21,7 @@ const TodoFooter = () => {
   return (
     <div className={classes.footer}>
       <span>{spanValue}</span>
+      <TodoFilter />
     </div>
   );
 };
