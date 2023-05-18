@@ -1,9 +1,10 @@
 import { useSelector } from "react-redux";
 
 import Card from "../../UI/Card/Card";
+import Todo from "../Todo/Todo";
+import TodoFooter from "../TodoFooter/TodoFooter";
 
 import classes from "./TodoList.module.css";
-import Todo from "../Todo/Todo";
 
 const TodoList = () => {
   const todos = useSelector((state) => state.todos);
@@ -20,6 +21,7 @@ const TodoList = () => {
           />
         ))}
       </ul>
+      <TodoFooter />
     </Card>
   );
 };
