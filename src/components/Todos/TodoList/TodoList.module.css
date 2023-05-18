@@ -2,12 +2,12 @@
   margin: 2rem auto;
   width: 90%;
   max-width: 40rem;
-  font-family: Century Gothic, serif;
+  font-family: "Century Gothic", sans-serif;
 }
 
 .todos ul {
   list-style: none;
-  padding-inline-start: 0px;
+  padding-inline-start: 0;
   max-height: 255px;
   overflow-y: auto;
 }
@@ -15,15 +15,16 @@
 .todos ul::-webkit-scrollbar {
   width: 0.3em;
 }
+
 .todos ul::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgb(238, 230, 221);
+  box-shadow: inset 0 0 6px rgb(238 230 221);
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .todos ul::-webkit-scrollbar-thumb {
   background-color: #a47373;
-  outline: 1px solid rgb(238, 230, 221);
+  outline: 1px solid rgb(238 230 221);
   border-radius: 8px;
 }
 

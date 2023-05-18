@@ -1,7 +1,7 @@
 .text{
     display:inline-block;
     margin-left: 15px;
-    color:rgb(81, 35, 3);
+    color:rgb(81 35 3);
 }
 
 .crossed{
@@ -17,7 +17,7 @@
 }
 
 .delete:hover {
-    color: rgb(114, 12, 12);
+    color: rgb(114 12 12);
 }
 
 li:hover .delete {
