@@ -9,3 +9,6 @@ export const TODO_FOOTER_ITEMS_LEFT = "items left";
 export const TODO_FOOTER_FILTER_ALL = "All";
 export const TODO_FILTER_ACTIVE_BTN = "Active";
 export const TODO_FILTER_COMPLETED_BTN = "Completed";
+export const TODO_FOOTER_CLEAR_COMPLETED = "Clear Completed";
+
+export const TODO_LIST_NOTHING_HERE = "Nothing's here :( Create new todos and get better every day!";

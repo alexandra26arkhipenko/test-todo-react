@@ -1,27 +1,35 @@
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import {
-    TODO_FOOTER_ITEMS_LEFT,
-    TODO_FOOTER_WELL_DONE,
-  } from "../../../constants/constants";
+  TODO_FOOTER_ITEMS_LEFT,
+  TODO_FOOTER_WELL_DONE,
+  TODO_FOOTER_CLEAR_COMPLETED,
+} from "../../../constants/constants";
+import TodoFilter from "./TodoFilter/TodoFilter";
+import Button from "../../UI/Button/Button";
+import { todoActions } from "../../../store/todo";
 
 import classes from "./TodoFooter.module.css";
-import TodoFilter from "./TodoFilter/TodoFilter";
 
-const TodoFooter = () => {
-  const todos = useSelector((state) => state.todos);
+const TodoFooter = (props) => {
+  const dispatch = useDispatch();
 
   const spanValue =
-    todos.filter((x) => !x.isComplited).length === 0
+    props.activeTodosCount === 0
       ? TODO_FOOTER_WELL_DONE
-      : `${
-          todos.filter((x) => !x.isComplited).length
-        } ${TODO_FOOTER_ITEMS_LEFT}`;
+      : `${props.activeTodosCount} ${TODO_FOOTER_ITEMS_LEFT}`;
+
+  const deleteAllCompleted = () => {
+    dispatch(todoActions.deleteAllCompletedTodos());
+  };
 
   return (
     <div className={classes.footer}>
       <span>{spanValue}</span>
-      <TodoFilter />
+      <TodoFilter onFilter={props.onFilter} />
+      <Button type="button" onClick={deleteAllCompleted}>
+        {TODO_FOOTER_CLEAR_COMPLETED}
+      </Button>
     </div>
   );
 };

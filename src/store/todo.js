@@ -10,7 +10,7 @@ const initialState = {
     { id: uuid(), text: "get platinim in the witcher", isCompleted: false },
     { id: uuid(), text: "go to Paris", isCompleted: true },
   ],
-  filter: ''
+  filter: "",
 };
 
 const todoSlice = createSlice({
@@ -27,22 +27,25 @@ const todoSlice = createSlice({
       state.todos.unshift(newTodo);
     },
     compliteTodo(state, action) {
-      const index = state.todos.findIndex((x) => x.id === action.payload);
+      const index = state.todos.findIndex((todo) => todo.id === action.payload);
 
       if (index !== -1) {
         state.todos[index].isCompleted = !state.todos[index].isCompleted;
       }
     },
     deleteTodo(state, action) {
-      const index = state.todos.findIndex((x) => x.id === action.payload);
+      const index = state.todos.findIndex((todo) => todo.id === action.payload);
 
       if (index !== -1) {
         state.todos.splice(index, 1);
       }
     },
-    filterTodos(state, action){
+    deleteAllCompletedTodos(state, action) {
+      state.todos = state.todos.filter((todo) => !todo.isCompleted);
+    },
+    filterTodos(state, action) {
       state.filter = action.payload;
-    }
+    },
   },
 });
 

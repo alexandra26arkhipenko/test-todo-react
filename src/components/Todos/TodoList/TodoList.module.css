@@ -2,6 +2,7 @@
   margin: 2rem auto;
   width: 90%;
   max-width: 40rem;
+  font-family: monospace;
 }
 
 .todos ul {
@@ -41,4 +42,16 @@
 
 .todos li:last-child {
   border-bottom: none;
+}
+
+.todos h3 {
+  font-size: 14px;
+  text-align: center;
+  color: #a25e5e;
+  padding: 0.5rem;
+  margin-left: 18%;
+  height: 50px;
+  padding-top: 20px;
+  align-items: center;
+  display: flex;
 }
