@@ -23,7 +23,7 @@ const todoSlice = createSlice({
         isComplited: false,
       };
 
-      state.todos.push(newTodo);
+      state.todos.unshift(newTodo);
     },
     compliteTodo(state, action) {
       const index = state.todos.findIndex((x) => x.id === action.payload);
