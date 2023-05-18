@@ -1,15 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
+import { getItemFromLocalStorage } from "../repository/localStorageRepository";
+
+const savedTodos = getItemFromLocalStorage("todos");
+let todos = [];
+
+if(savedTodos){
+   todos = JSON.parse(savedTodos);
+}
 
 const initialState = {
-  todos: [
-    { id: uuid(), text: "kill yourself", isCompleted: false },
-    { id: uuid(), text: "you really should to it", isCompleted: true },
-    { id: uuid(), text: "find new job", isCompleted: true },
-    { id: uuid(), text: "eat lunch", isCompleted: false },
-    { id: uuid(), text: "get platinim in the witcher", isCompleted: false },
-    { id: uuid(), text: "go to Paris", isCompleted: true },
-  ],
+  todos: todos,
   filter: "",
 };
 
