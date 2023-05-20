@@ -1,4 +1,6 @@
+import React from 'react';
 import classes from './Button.module.css';
+import PropTypes from "prop-types";
 
 const Button = (props) => {
   return (
@@ -11,6 +13,14 @@ const Button = (props) => {
       {props.children}
     </button>
   );
+};
+
+Button.propTypes = {
+  type: PropTypes.string,
+  onClick: PropTypes.func,
+  className: PropTypes.any,
+  value: PropTypes.any,
+  children: PropTypes.any
 };
 
 export default Button;

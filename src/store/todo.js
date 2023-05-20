@@ -41,7 +41,7 @@ const todoSlice = createSlice({
         state.todos.splice(index, 1);
       }
     },
-    deleteAllCompletedTodos(state, action) {
+    deleteAllCompletedTodos(state) {
       state.todos = state.todos.filter((todo) => !todo.isCompleted);
     },
     filterTodos(state, action) {
