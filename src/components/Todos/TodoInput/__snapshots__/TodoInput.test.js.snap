@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoInput should render correctly 1`] = `
+<div>
+  <div
+    class="card todo-input"
+  >
+    <form>
+      <input
+        checked=""
+        class="round"
+        disabled=""
+        type="checkbox"
+      />
+      <input
+        class="text-input"
+        placeholder="What are you going to do next?"
+        type="text"
+        value=""
+      />
+    </form>
+  </div>
+</div>
+`;

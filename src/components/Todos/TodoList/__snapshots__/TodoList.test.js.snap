@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoInput should render correctly 1`] = `
+<div>
+  <div
+    class="card todos"
+  >
+    <h3>
+      Nothing's here :( Create new todos and get better every day!
+    </h3>
+    <div
+      class="footer"
+    >
+      <span>
+        Well done!
+      </span>
+      <div>
+        <button
+          class="button undefined"
+          type="button"
+          value="All"
+        >
+          All
+        </button>
+        <button
+          class="button undefined"
+          type="button"
+          value="Active"
+        >
+          Active
+        </button>
+        <button
+          class="button undefined"
+          type="button"
+          value="Completed"
+        >
+          Completed
+        </button>
+      </div>
+      <button
+        class="button undefined"
+        type="button"
+      >
+        Clear Completed
+      </button>
+    </div>
+  </div>
+</div>
+`;

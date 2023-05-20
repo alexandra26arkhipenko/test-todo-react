@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoFooter should render correctly 1`] = `
+<div>
+  <div
+    class="footer"
+  >
+    <span>
+      1 items left
+    </span>
+    <div>
+      <button
+        class="button undefined"
+        type="button"
+        value="All"
+      >
+        All
+      </button>
+      <button
+        class="button undefined"
+        type="button"
+        value="Active"
+      >
+        Active
+      </button>
+      <button
+        class="button undefined"
+        type="button"
+        value="Completed"
+      >
+        Completed
+      </button>
+    </div>
+    <button
+      class="button undefined"
+      type="button"
+    >
+      Clear Completed
+    </button>
+  </div>
+</div>
+`;
