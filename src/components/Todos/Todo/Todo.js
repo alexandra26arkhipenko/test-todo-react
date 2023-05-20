@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { Draggable } from "react-beautiful-dnd";
 
 import Button from "../../UI/Button/Button";
 import Checkbox from "../../UI/Checkbox/Checkbox";
@@ -19,17 +20,31 @@ const Todo = (props) => {
   };
 
   return (
-    <li>
-      <Checkbox checked={props.isCompleted} onChange={checkboxHandler} />
-      <div
-        className={`${classes.text} ${props.isCompleted && classes.crossed}`}
-      >
-        {props.text}
-      </div>
-      <Button type="button" className={classes.delete} onClick={deleteHandler}>
-        {TODO_DELETE_BTN_TEXT}
-      </Button>
-    </li>
+    <Draggable key={props.id} draggableId={props.id} index={props.index}>
+      {(provided) => (
+        <li
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+        >
+          <Checkbox checked={props.isCompleted} onChange={checkboxHandler} />
+          <div
+            className={`${classes.text} ${
+              props.isCompleted && classes.crossed
+            }`}
+          >
+            {props.text}
+          </div>
+          <Button
+            type="button"
+            className={classes.delete}
+            onClick={deleteHandler}
+          >
+            {TODO_DELETE_BTN_TEXT}
+          </Button>
+        </li>
+      )}
+    </Draggable>
   );
 };
 

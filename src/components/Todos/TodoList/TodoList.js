@@ -1,4 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 import Card from "../../UI/Card/Card";
 import Todo from "../Todo/Todo";
@@ -14,37 +16,58 @@ import {
 
 const TodoList = () => {
   const todos = useSelector((state) => state.todos);
+  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
+  const [filteredTodos, setFilteredTodos] = useState([]);
 
-  const filteredTodos = useSelector((state) => {
-    switch (state.filter) {
+  useEffect(() => {
+    switch (filter) {
       case TODO_FILTER_ACTIVE_BTN:
-        return todos.filter((todo) => !todo.isCompleted);
+        setFilteredTodos(todos.filter((todo) => !todo.isCompleted));
+        break;
       case TODO_FILTER_COMPLETED_BTN:
-        return todos.filter((todo) => todo.isCompleted);
+        setFilteredTodos(todos.filter((todo) => todo.isCompleted));
+        break;
       default:
-        return todos;
+        setFilteredTodos(todos);
+        break;
     }
-  });
+  }, [todos, filter]);
 
   const filterHandler = (filterType) => {
     dispatch(todoActions.filterTodos(filterType));
+  };
+
+  const handleOnDragEnd = (result) => {
+    const items = [...filteredTodos];
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+
+    setFilteredTodos(items);
   };
 
   return (
     <Card className={classes.todos}>
       {filteredTodos.length === 0 && <h3>{TODO_LIST_NOTHING_HERE}</h3>}
       {filteredTodos.length !== 0 && (
-        <ul>
-          {filteredTodos.map((todo) => (
-            <Todo
-              key={todo.id}
-              id={todo.id}
-              text={todo.text}
-              isCompleted={todo.isCompleted}
-            />
-          ))}
-        </ul>
+        <DragDropContext onDragEnd={handleOnDragEnd}>
+          <Droppable droppableId="characters">
+            {(provided) => (
+              <ul {...provided.droppableProps} ref={provided.innerRef}>
+                {filteredTodos.map((todo, index) => (
+                  <Todo
+                    key={todo.id}
+                    id={todo.id}
+                    text={todo.text}
+                    index={index}
+                    isCompleted={todo.isCompleted}
+                  />
+                ))}
+                {provided.placeholder}
+              </ul>
+            )}
+          </Droppable>
+        </DragDropContext>
       )}
       <TodoFooter
         onFilter={filterHandler}
