@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import {
   TODO_FILTER_ACTIVE_BTN,
   TODO_FILTER_COMPLETED_BTN,
@@ -35,6 +37,10 @@ const TodoFilter = (props) => {
       </Button>
     </div>
   );
+};
+
+TodoFilter.propTypes = {
+  onFilter: PropTypes.func,
 };
 
 export default TodoFilter;

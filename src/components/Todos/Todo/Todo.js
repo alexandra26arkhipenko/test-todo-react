@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { Draggable } from "react-beautiful-dnd";
 
@@ -46,6 +48,13 @@ const Todo = (props) => {
       )}
     </Draggable>
   );
+};
+
+Todo.propTypes = {
+  id: PropTypes.string,
+  index: PropTypes.number,
+  isCompleted: PropTypes.bool,
+  text: PropTypes.string
 };
 
 export default Todo;

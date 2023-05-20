@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import classes from "./Checkbox.module.css";
 
 const Checkbox = (props) => {
@@ -10,6 +12,12 @@ const Checkbox = (props) => {
       disabled={props.isDisabled}
     />
   );
+};
+
+Checkbox.propTypes = {
+  checked: PropTypes.bool,
+  onChange: PropTypes.func,
+  isDisabled: PropTypes.bool
 };
 
 export default Checkbox;

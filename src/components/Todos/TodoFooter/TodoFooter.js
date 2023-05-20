@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 
 import {
@@ -32,6 +34,11 @@ const TodoFooter = (props) => {
       </Button>
     </div>
   );
+};
+
+TodoFooter.propTypes = {
+  activeTodosCount: PropTypes.number,
+  onFilter: PropTypes.func
 };
 
 export default TodoFooter;

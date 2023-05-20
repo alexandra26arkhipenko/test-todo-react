@@ -5,11 +5,10 @@ module.exports = {
     jest: true
   },
   extends: [
-    'eslint:recommended', 
+    'eslint:recommended',
     'plugin:react/recommended',
-    'airbnb',
-  ],
-  overrides: [
+    'plugin:testing-library/react',
+    'plugin:cypress/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -20,7 +19,12 @@ module.exports = {
   },
   plugins: [
     'react',
+    "testing-library"
   ],
   rules: {
+    'testing-library/no-node-access': [
+      'error',
+      { 'allowContainerFirstChild': true }
+    ]
   },
 };

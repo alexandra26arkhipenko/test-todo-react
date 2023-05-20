@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "./Footer.module.css";
 
 import { FOOTER_TEXT } from "../../../constants/constants";
