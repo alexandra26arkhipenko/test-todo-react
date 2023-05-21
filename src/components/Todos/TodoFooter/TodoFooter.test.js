@@ -2,7 +2,6 @@ import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import TodoFooter from "./TodoFooter";
-import TODO_FOOTER_CLEAR_COMPLETED from "../../../constants/constants";
 import { todoActions } from "../../../store/todo";
 import configureMockStore from "redux-mock-store";
 
