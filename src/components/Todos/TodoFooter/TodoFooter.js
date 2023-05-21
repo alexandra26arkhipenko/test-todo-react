@@ -29,7 +29,12 @@ const TodoFooter = (props) => {
     <div className={classes.footer}>
       <span>{spanValue}</span>
       <TodoFilter onFilter={props.onFilter} />
-      <Button type="button" onClick={deleteAllCompleted}>
+      <Button
+        type="button"
+        name="button"
+        value={TODO_FOOTER_CLEAR_COMPLETED}
+        onClick={deleteAllCompleted}
+      >
         {TODO_FOOTER_CLEAR_COMPLETED}
       </Button>
     </div>
@@ -38,7 +43,7 @@ const TodoFooter = (props) => {
 
 TodoFooter.propTypes = {
   activeTodosCount: PropTypes.number,
-  onFilter: PropTypes.func
+  onFilter: PropTypes.func,
 };
 
 export default TodoFooter;

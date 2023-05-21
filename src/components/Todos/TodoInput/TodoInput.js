@@ -31,6 +31,7 @@ const TodoInput = () => {
       <form aria-label="form" onSubmit={onSubmitHandler}>
         <Checkbox isDisabled={true} checked={true}/>
         <input
+          name="todo-input"
           placeholder={TODO_INPUT_PLACEHOLDER}
           className={classes["text-input"]}
           type="text"
