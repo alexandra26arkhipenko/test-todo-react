@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { todoActions } from "../../../store/todo";
+import { TODO_DELETE_BTN_TEXT } from "../../../constants/constants";
 
 const filteredTodos = [{ id: "1", text: "text", isCompleted: false }];
 const mockStore = configureMockStore();
@@ -90,7 +91,7 @@ describe("Todo", () => {
       </Provider>
     );    
 
-    fireEvent.click(screen.getByText('X'));
+    fireEvent.click(screen.getByText(TODO_DELETE_BTN_TEXT));
 
     expect(store.getActions()).toContainEqual(todoActions.deleteTodo("1"));
   });
