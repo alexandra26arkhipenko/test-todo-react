@@ -5,7 +5,9 @@ exports[`TodoInput should render correctly 1`] = `
   <div
     class="card todo-input"
   >
-    <form>
+    <form
+      aria-label="form"
+    >
       <input
         checked=""
         class="round"
