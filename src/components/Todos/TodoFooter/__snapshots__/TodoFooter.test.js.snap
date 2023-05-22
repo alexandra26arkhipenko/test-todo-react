@@ -10,21 +10,21 @@ exports[`TodoFooter should render correctly 1`] = `
     </span>
     <div>
       <button
-        class="button undefined"
+        class="button false"
         type="button"
         value="All"
       >
         All
       </button>
       <button
-        class="button undefined"
+        class="button false"
         type="button"
         value="Active"
       >
         Active
       </button>
       <button
-        class="button undefined"
+        class="button false"
         type="button"
         value="Completed"
       >
@@ -34,6 +34,7 @@ exports[`TodoFooter should render correctly 1`] = `
     <button
       class="button undefined"
       type="button"
+      value="Clear Completed"
     >
       Clear Completed
     </button>

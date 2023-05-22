@@ -25,6 +25,7 @@ Array [
       />
       <input
         className="text-input"
+        name="todo-input"
         onChange={[Function]}
         placeholder="What are you going to do next?"
         type="text"
@@ -46,7 +47,7 @@ Array [
       </span>
       <div>
         <button
-          className="button undefined"
+          className="button button-light"
           onClick={[Function]}
           type="button"
           value="All"
@@ -54,7 +55,7 @@ Array [
           All
         </button>
         <button
-          className="button undefined"
+          className="button false"
           onClick={[Function]}
           type="button"
           value="Active"
@@ -62,7 +63,7 @@ Array [
           Active
         </button>
         <button
-          className="button undefined"
+          className="button false"
           onClick={[Function]}
           type="button"
           value="Completed"
@@ -74,6 +75,7 @@ Array [
         className="button undefined"
         onClick={[Function]}
         type="button"
+        value="Clear Completed"
       >
         Clear Completed
       </button>

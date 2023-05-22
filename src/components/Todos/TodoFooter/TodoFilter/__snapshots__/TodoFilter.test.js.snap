@@ -4,21 +4,21 @@ exports[`TodoFilter should render correctly 1`] = `
 <div>
   <div>
     <button
-      class="button undefined"
+      class="button false"
       type="button"
       value="All"
     >
       All
     </button>
     <button
-      class="button undefined"
+      class="button false"
       type="button"
       value="Active"
     >
       Active
     </button>
     <button
-      class="button undefined"
+      class="button false"
       type="button"
       value="Completed"
     >

@@ -16,6 +16,7 @@ exports[`TodoInput should render correctly 1`] = `
       />
       <input
         class="text-input"
+        name="todo-input"
         placeholder="What are you going to do next?"
         type="text"
         value=""
