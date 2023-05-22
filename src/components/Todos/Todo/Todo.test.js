@@ -40,7 +40,7 @@ describe("Todo", () => {
 
   it("should make todo complited when checkbox is clicked", () => {
     render(
-        <Provider store={store}>
+      <Provider store={store}>
         <DragDropContext>
           <Droppable droppableId="characters">
             {(provided) => (
@@ -60,16 +60,16 @@ describe("Todo", () => {
           </Droppable>
         </DragDropContext>
       </Provider>
-    );    
+    );
 
-    fireEvent.click(screen.getByRole('checkbox'));
+    fireEvent.click(screen.getByRole("checkbox"));
 
     expect(store.getActions()).toContainEqual(todoActions.compliteTodo("1"));
   });
 
   it("should delete when delete button is clicked", () => {
     render(
-        <Provider store={store}>
+      <Provider store={store}>
         <DragDropContext>
           <Droppable droppableId="characters">
             {(provided) => (
@@ -89,7 +89,7 @@ describe("Todo", () => {
           </Droppable>
         </DragDropContext>
       </Provider>
-    );    
+    );
 
     fireEvent.click(screen.getByText(TODO_DELETE_BTN_TEXT));
 

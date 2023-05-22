@@ -7,10 +7,10 @@ import Card from "./Card";
 describe("Card", () => {
   it("should render correctly", () => {
     const { container } = render(
-        <Provider store={store}>
-          <Card className={''}/>
-        </Provider>
-      );
+      <Provider store={store}>
+        <Card className={""} />
+      </Provider>
+    );
     expect(container).toMatchSnapshot();
   });
 });

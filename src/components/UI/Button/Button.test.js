@@ -5,18 +5,18 @@ import store from "../../../store/store";
 import Button from "./Button";
 
 const props = {
-    type: 'button',
-    onClick: jest.fn(),
-    className: ''
-}
+  type: "button",
+  onClick: jest.fn(),
+  className: "",
+};
 
 describe("Button", () => {
   it("should render correctly", () => {
     const { container } = render(
-        <Provider store={store}>
-          <Button {...props}/>
-        </Provider>
-      );
+      <Provider store={store}>
+        <Button {...props} />
+      </Provider>
+    );
     expect(container).toMatchSnapshot();
   });
 });

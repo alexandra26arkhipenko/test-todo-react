@@ -10,7 +10,7 @@ function App() {
     <Fragment>
       <Header />
       <TodoInput />
-      <TodoList/>
+      <TodoList />
       <Footer />
     </Fragment>
   );

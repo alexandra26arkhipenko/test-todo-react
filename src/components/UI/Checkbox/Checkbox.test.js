@@ -7,10 +7,10 @@ import Checkbox from "./Checkbox";
 describe("Checkbox", () => {
   it("should render correctly", () => {
     const { container } = render(
-        <Provider store={store}>
-          <Checkbox />
-        </Provider>
-      );
+      <Provider store={store}>
+        <Checkbox />
+      </Provider>
+    );
     expect(container).toMatchSnapshot();
   });
 });

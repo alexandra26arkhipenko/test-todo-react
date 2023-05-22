@@ -5,7 +5,7 @@ import todoReducer from "./todo";
 
 const store = configureStore({
   reducer: todoReducer,
-  middleware: [localStorageMiddleware]
+  middleware: [localStorageMiddleware],
 });
 
 export default store;

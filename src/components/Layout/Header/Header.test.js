@@ -7,10 +7,10 @@ import Header from "./Header";
 describe("Header", () => {
   it("should render correctly", () => {
     const { container } = render(
-        <Provider store={store}>
-          <Header />
-        </Provider>
-      );
+      <Provider store={store}>
+        <Header />
+      </Provider>
+    );
     expect(container).toMatchSnapshot();
   });
 });

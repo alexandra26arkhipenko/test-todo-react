@@ -31,6 +31,8 @@ describe("TodoFooter", () => {
 
     fireEvent.click(screen.getByText("Clear Completed"));
 
-    expect(store.getActions()).toContainEqual(todoActions.deleteAllCompletedTodos());
+    expect(store.getActions()).toContainEqual(
+      todoActions.deleteAllCompletedTodos()
+    );
   });
 });

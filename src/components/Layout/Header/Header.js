@@ -5,7 +5,7 @@ import todoImage from "../../../assets/todo.jpg";
 const Header = () => {
   return (
     <header className={classes["todo-image"]}>
-      <img src={todoImage} alt="plants"/>
+      <img src={todoImage} alt="plants" />
     </header>
   );
 };

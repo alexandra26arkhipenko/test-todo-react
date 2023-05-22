@@ -5,8 +5,8 @@ import { getItemFromLocalStorage } from "../repository/localStorageRepository";
 const savedTodos = getItemFromLocalStorage("todos");
 let todos = [];
 
-if(savedTodos){
-   todos = JSON.parse(savedTodos);
+if (savedTodos) {
+  todos = JSON.parse(savedTodos);
 }
 
 const initialState = {

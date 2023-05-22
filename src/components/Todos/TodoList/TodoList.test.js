@@ -7,10 +7,10 @@ import TodoList from "./TodoList";
 describe("TodoInput", () => {
   it("should render correctly", () => {
     const { container } = render(
-        <Provider store={store}>
-          <TodoList />
-        </Provider>
-      );
+      <Provider store={store}>
+        <TodoList />
+      </Provider>
+    );
     expect(container).toMatchSnapshot();
   });
 });

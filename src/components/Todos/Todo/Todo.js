@@ -54,7 +54,7 @@ Todo.propTypes = {
   id: PropTypes.string,
   index: PropTypes.number,
   isCompleted: PropTypes.bool,
-  text: PropTypes.string
+  text: PropTypes.string,
 };
 
 export default Todo;

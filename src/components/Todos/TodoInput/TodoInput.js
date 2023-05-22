@@ -19,7 +19,7 @@ const TodoInput = () => {
     }
 
     dispatch(todoActions.addTodo(enteredTodo));
-    setEnteredTodo('');
+    setEnteredTodo("");
   };
 
   const inputHandler = (event) => {
@@ -29,7 +29,7 @@ const TodoInput = () => {
   return (
     <Card className={classes["todo-input"]}>
       <form aria-label="form" onSubmit={onSubmitHandler}>
-        <Checkbox isDisabled={true} checked={true}/>
+        <Checkbox isDisabled={true} checked={true} />
         <input
           name="todo-input"
           placeholder={TODO_INPUT_PLACEHOLDER}

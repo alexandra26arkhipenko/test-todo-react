@@ -20,16 +20,14 @@ describe("TodoInput", () => {
   });
 
   it("should dispatch addTodo action when submitting todo", () => {
-    // Arrange
     render(
       <Provider store={store}>
         <TodoInput />
       </Provider>
     );
 
-    // Act
     const inputElement = screen.getByPlaceholderText(TODO_INPUT_PLACEHOLDER);
-    const formElement = screen.getByRole('form');
+    const formElement = screen.getByRole("form");
     const enteredTodo = "text";
 
     fireEvent.change(inputElement, { target: { value: enteredTodo } });

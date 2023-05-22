@@ -7,10 +7,10 @@ import store from "../../../store/store";
 describe("Footer", () => {
   it("should render correctly", () => {
     const { container } = render(
-        <Provider store={store}>
-          <Footer />
-        </Provider>
-      );
+      <Provider store={store}>
+        <Footer />
+      </Provider>
+    );
     expect(container).toMatchSnapshot();
   });
 });
