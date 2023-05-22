@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 import Card from "../../UI/Card/Card";
@@ -16,34 +16,32 @@ import {
 
 const TodoList = () => {
   const todos = useSelector((state) => state.todos);
-  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
-  const [filteredTodos, setFilteredTodos] = useState([]);
-
-  useEffect(() => {
-    switch (filter) {
+  const filteredTodos = useSelector((state) => {
+    switch (state.filter) {
       case TODO_FILTER_ACTIVE_BTN:
-        setFilteredTodos(todos.filter((todo) => !todo.isCompleted));
-        break;
+        return todos.filter((todo) => !todo.isCompleted);
       case TODO_FILTER_COMPLETED_BTN:
-        setFilteredTodos(todos.filter((todo) => todo.isCompleted));
-        break;
+        return todos.filter((todo) => todo.isCompleted);
       default:
-        setFilteredTodos(todos);
-        break;
+        return todos;
     }
-  }, [todos, filter]);
+  });
 
   const filterHandler = (filterType) => {
     dispatch(todoActions.filterTodos(filterType));
   };
 
   const handleOnDragEnd = (result) => {
-    const items = [...filteredTodos];
-    const [reorderedItem] = items.splice(result.source.index, 1);
-    items.splice(result.destination.index, 0, reorderedItem);
-
-    setFilteredTodos(items);
+    const dragIndex = result.source.index;
+    const dropIndex = result.destination.index;
+    dispatch(
+      todoActions.reorderTodos({
+        dragIndex: dragIndex,
+        dropIndex: dropIndex,
+        filteredTodos: filteredTodos,
+      })
+    );
   };
 
   return (
