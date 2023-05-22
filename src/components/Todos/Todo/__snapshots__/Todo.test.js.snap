@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo should render correctly 1`] = `
+<div>
+  <ul
+    data-rbd-droppable-context-id="0"
+    data-rbd-droppable-id="characters"
+  >
+    <li
+      aria-describedby="rbd-hidden-text-0-hidden-text-0"
+      data-rbd-drag-handle-context-id="0"
+      data-rbd-drag-handle-draggable-id="1"
+      data-rbd-draggable-context-id="0"
+      data-rbd-draggable-id="1"
+      draggable="false"
+      role="button"
+      tabindex="0"
+    >
+      <input
+        class="round"
+        type="checkbox"
+      />
+      <div
+        class="text false"
+      >
+        text
+      </div>
+      <button
+        class="button delete"
+        type="button"
+      >
+        X
+      </button>
+    </li>
+  </ul>
+</div>
+`;

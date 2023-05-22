@@ -1,0 +1,16 @@
+.footer {
+  outline: none;
+  color: #d7cac1db;
+  margin: 20px;
+  margin-bottom: 20px;
+  margin-left: 35px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 13px;
+  font-size: 15px;
+}
+
+.footer button:hover {
+  color: rgb(114 12 12);
+}
