@@ -12,7 +12,7 @@ if (savedTodos) {
 
 const initialState = {
   todos: todos,
-  filter: "",
+  filter: TODO_FOOTER_FILTER_ALL,
 };
 
 const todoSlice = createSlice({

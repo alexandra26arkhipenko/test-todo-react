@@ -14,7 +14,3 @@
 .footer button:hover {
   color: rgb(114 12 12);
 }
-
-.footer button:focus {
-    color: rgb(133, 21, 21);
-  }
